@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --font-noto-sans  : var(--font-noto);
+  --font-fwc2026: var(--font-fwc2026);
+  --font-fifa26: var(--font-fifa-26);
+}
