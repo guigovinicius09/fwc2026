@@ -1,7 +1,31 @@
-# FIFA World Cup 2026
+# :trophy: FIFA World Cup 2026
 
-## This project is about the FIFA World Cup 2026
+## :mag_right: Overview
 
-### About The Project
+Web application developed in Next.js focused on visualizing information about the 2026 FIFA World Cup.
 
-The goal is to capitalize on the Fifa World Cup 2026 hype and develop a simple frontend project listing the matches, dates, cities, stadiums, and update in real time (or almost) the matches results. This project is a exercise to keep my skills sharp and learn new skill about real project in production environments.
+The project aims to provide a modern and interactive experience to follow:
+
+- Participating teams
+- Competition groups
+- Match schedule
+- Stadiums and host cities
+- Geographic visualization in 3D globe
+
+## :dart: Objectives
+
+### MVP (June/2026)
+
+- Display the 48 participating countries
+- Display the competition groups
+- Display the complete match schedule
+- Display stadiums and host cities
+- Deployment on Vercel
+
+### Future improvements
+
+- 3D globe with React Globe
+- Geographic visualization of the teams
+- Competition statistics
+- Result simulation
+- World Cup history
