@@ -1,0 +1,102 @@
+import Image from 'next/image';
+import { Calendar, MapPin, Clock } from 'lucide-react';
+
+interface MatchTeam {
+  name: string;
+  flagUrl: string;
+  score?: number;
+}
+
+interface MatchCardProps {
+  matchNumber: number;
+  stage: string;
+  date: string;
+  time: string;
+  stadium: string;
+  city: string;
+  teamA: MatchTeam;
+  teamB: MatchTeam;
+  status?: 'upcoming' | 'live' | 'finished';
+}
+
+export default function MatchCard({
+  matchNumber,
+  stage,
+  date,
+  time,
+  stadium,
+  city,
+  teamA,
+  teamB,
+  status = 'upcoming'
+}: MatchCardProps) {
+  return (
+    <div className="relative w-full bg-[#0a0f1a] border border-white/10 overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+      {/* Header */}
+      <div className="flex justify-between items-center px-4 py-2 bg-white/5 border-b border-white/10 text-xs text-gray-400 font-noto uppercase tracking-wider">
+        <span>Jogo {matchNumber} • {stage}</span>
+        {status === 'live' && (
+          <span className="text-red-500 font-bold flex items-center gap-1 animate-pulse">
+            <span className="w-2 h-2 bg-red-500 rounded-full"></span> AO VIVO
+          </span>
+        )}
+        {status === 'finished' && <span>ENCERRADO</span>}
+      </div>
+
+      <div className="p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        {/* Teams & Score */}
+        <div className="flex-1 w-full flex items-center justify-center sm:justify-between gap-4">
+          {/* Team A */}
+          <div className="flex flex-col items-center sm:items-end gap-2 flex-1">
+            <div className="relative w-16 h-11 border border-white/20 bg-gray-800">
+              <Image src={teamA.flagUrl} alt={teamA.name} fill className="object-cover" />
+            </div>
+            <span className="font-fwc2026 text-white sm:text-lg tracking-wide text-center sm:text-right">{teamA.name}</span>
+          </div>
+
+          {/* VS or Score */}
+          <div className="flex flex-col items-center justify-center min-w-[80px]">
+            {status === 'upcoming' ? (
+              <span className="text-gray-500 font-fwc2026 text-xl">VS</span>
+            ) : (
+              <div className="flex items-center gap-3 text-3xl font-fwc2026 text-white">
+                <span>{teamA.score}</span>
+                <span className="text-gray-500">-</span>
+                <span>{teamB.score}</span>
+              </div>
+            )}
+            <span className="text-blue-400 text-xs font-bold mt-1">{time}</span>
+          </div>
+
+          {/* Team B */}
+          <div className="flex flex-col items-center sm:items-start gap-2 flex-1">
+            <div className="relative w-16 h-11 border border-white/20 bg-gray-800">
+              <Image src={teamB.flagUrl} alt={teamB.name} fill className="object-cover" />
+            </div>
+            <span className="font-fwc2026 text-white sm:text-lg tracking-wide text-center sm:text-left">{teamB.name}</span>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="hidden md:block w-px h-20 bg-white/10"></div>
+
+        {/* Location & Date */}
+        <div className="flex flex-col gap-2 min-w-[200px] text-sm text-gray-400 font-noto">
+          <div className="flex items-center gap-2">
+            <Calendar size={16} className="text-blue-500" />
+            <span>{date}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin size={16} className="text-blue-500" />
+            <span>{stadium}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-4"></span>
+            <span className="text-xs text-gray-500">{city}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

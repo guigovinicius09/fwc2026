@@ -23,3 +23,11 @@
 - Documentation preparation
 - Documentation folder organization
 - Application pages routing configuration
+
+### Added/Changed - 2026-06-05
+
+- **Homepage (`/`) Redesign:** Added a new Hero section and Fast Links for Matches and Stadiums.
+- **Teams Page (`/teams`):** Migrated the Groups grid from the homepage to this dedicated page.
+- **Matches Page (`/matches`):** Created `MatchCard` component and implemented the match schedule with mock data.
+- **Stadiums Page (`/stadiums`):** Created `StadiumCard` component and implemented the host cities/stadiums layout with mock data.
+- **Navigation:** Updated Header to rename the "Seleções" link to "Grupos e Seleções".

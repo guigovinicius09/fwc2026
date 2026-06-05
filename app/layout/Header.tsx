@@ -29,7 +29,7 @@ export default function Header() {
                     <Link href="/teams" className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group">
                         <Users size={18} className="group-hover:text-blue-400 transition-colors" />
                         <span className="relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-500 group-hover:after:w-full after:transition-all after:duration-300">
-                            Seleções
+                            Grupos e Seleções
                         </span>
                     </Link>
                     

@@ -5,24 +5,23 @@ import Footer from "./layout/Footer";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
 // Fonts
 const notoSans = Noto_Sans({
   subsets: ["latin"],
   variable: "--font-noto",
-})
+});
 
 const fwc2026 = localFont({
   src: "./fonts/FWC2026.ttf",
   variable: "--font-fwc2026",
   display: "swap",
-})
+});
 
-const fifa26 = localFont ({
+const fifa26 = localFont({
   src: "./fonts/fifa-26.ttf",
   variable: "--font-fifa-26",
   display: "swap",
-})
+});
 
 // Metadata
 export const metadata: Metadata = {
@@ -39,13 +38,18 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${notoSans.variable} ${fwc2026.variable} ${fifa26.variable} font-noto-sans h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-gradient-to-b from-gray-900 to-blue-900">
+      className={`${notoSans.variable} ${fwc2026.variable} ${fifa26.variable} font-noto-sans h-full antialiased`}>
+      <body
+        className="min-h-full flex flex-col bg-slate-950/85 bg-blend-overlay"
+        style={{
+          backgroundImage: "url('/images/bg_fwc2026.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundRepeat: "no-repeat",
+        }}>
         <Header />
-        <main className="flex-1 flex flex-col w-full">
-          {children}
-        </main>
+        <main className="flex-1 flex flex-col w-full">{children}</main>
         <Footer />
       </body>
     </html>

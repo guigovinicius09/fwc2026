@@ -1,155 +1,93 @@
-import GroupCard from "@/components/GroupCard";
+import Link from "next/link";
+import { ArrowRight, Users, Calendar, MapPin } from "lucide-react";
 
 export default function Home() {
-  const groups = [
-    {
-      groupName: "Grupo A",
-      backgroundUrl: "/images/backgrounds/groupA_bg.svg",
-      teams: [
-        { name: "MÉXICO", flagUrl: "/images/flags/mexico.svg" },
-        { name: "ÁFRICA DO SUL", flagUrl: "/images/flags/south_africa.svg" },
-        { name: "COREIA DO SUL", flagUrl: "/images/flags/south_korea.svg" },
-        { name: "TCHÉQUIA", flagUrl: "/images/flags/czechia.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo B",
-      backgroundUrl: "/images/backgrounds/groupB_bg.svg",
-      teams: [
-        { name: "CANADÁ", flagUrl: "/images/flags/canada.svg" },
-        {
-          name: "BÓSNIA E HERZEGOVINA",
-          flagUrl: "/images/flags/bosnia_and_herzegovina.svg",
-        },
-        { name: "QATAR", flagUrl: "/images/flags/qatar.svg" },
-        { name: "SUÍÇA", flagUrl: "/images/flags/switzerland.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo C",
-      backgroundUrl: "/images/backgrounds/groupC_bg.svg",
-      teams: [
-        { name: "BRASIL", flagUrl: "/images/flags/brazil.svg" },
-        { name: "MARROCOS", flagUrl: "/images/flags/morocco.svg" },
-        { name: "HAITI", flagUrl: "/images/flags/haiti.svg" },
-        { name: "ESCOCIA", flagUrl: "/images/flags/scotland.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo D",
-      backgroundUrl: "/images/backgrounds/groupD_bg.svg",
-      teams: [
-        { name: "Estados Unidos", flagUrl: "/images/flags/usa.svg" },
-        { name: "AUSTRALIA", flagUrl: "/images/flags/australia.svg" },
-        { name: "PARAGUAI", flagUrl: "/images/flags/paraguay.svg" },
-        { name: "TURQUIA", flagUrl: "/images/flags/turkey.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo E",
-      backgroundUrl: "/images/backgrounds/groupE_bg.svg",
-      teams: [
-        { name: "ALEMANHA", flagUrl: "/images/flags/germany.svg" },
-        { name: "CURAÇAO", flagUrl: "/images/flags/curacao.svg" },
-        { name: "COSTA DO MARFIM", flagUrl: "/images/flags/cote_d_ivoire.svg" },
-        { name: "EQUADOR", flagUrl: "/images/flags/ecuador.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo F",
-      backgroundUrl: "/images/backgrounds/groupF_bg.svg",
-      teams: [
-        { name: "HOLANDA", flagUrl: "/images/flags/netherlands.svg" },
-        { name: "JAPÃO", flagUrl: "/images/flags/japan.svg" },
-        { name: "SUÉCIA", flagUrl: "/images/flags/sweden.svg" },
-        { name: "TUNÍSIA", flagUrl: "/images/flags/tunisia.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo G",
-      backgroundUrl: "/images/backgrounds/groupG_bg.svg",
-      teams: [
-        { name: "BÉLGICA", flagUrl: "/images/flags/belgium.svg" },
-        { name: "EGITO", flagUrl: "/images/flags/egypt.svg" },
-        { name: "IRÃ", flagUrl: "/images/flags/iran.svg" },
-        { name: "NOVA ZELÂNDIA", flagUrl: "/images/flags/new_zealand.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo H",
-      backgroundUrl: "/images/backgrounds/groupH_bg.svg",
-      teams: [
-        { name: "ESPANHA", flagUrl: "/images/flags/spain.svg" },
-        { name: "CABO VERDE", flagUrl: "/images/flags/cabo_verde.svg" },
-        { name: "ARÁBIA SAUDITA", flagUrl: "/images/flags/saudi_arabia.svg" },
-        { name: "URUGUAI", flagUrl: "/images/flags/uruguay.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo I",
-      backgroundUrl: "/images/backgrounds/groupI_bg.svg",
-      teams: [
-        { name: "FRANÇA", flagUrl: "/images/flags/france.svg" },
-        { name: "SENEGAL", flagUrl: "/images/flags/senegal.svg" },
-        { name: "IRAQUE", flagUrl: "/images/flags/iraq.svg" },
-        { name: "NORUEGA", flagUrl: "/images/flags/norway.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo J",
-      backgroundUrl: "/images/backgrounds/groupJ_bg.svg",
-      teams: [
-        { name: "ARGENTINA", flagUrl: "/images/flags/argentina.svg" },
-        { name: "ARGÉLIA", flagUrl: "/images/flags/algeria.svg" },
-        { name: "ÁUSTRIA", flagUrl: "/images/flags/austria.svg" },
-        { name: "JORDÂNIA", flagUrl: "/images/flags/jordan.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo K",
-      backgroundUrl: "/images/backgrounds/groupK_bg.svg",
-      teams: [
-        { name: "PORTUGAL", flagUrl: "/images/flags/portugal.svg" },
-        { name: "ED CONGO", flagUrl: "/images/flags/congo_dr.svg" },
-        { name: "UZBEQUISTÃO", flagUrl: "/images/flags/uzbekistan.svg" },
-        { name: "COLÔMBIA", flagUrl: "/images/flags/colombia.svg" },
-      ],
-    },
-    {
-      groupName: "Grupo L",
-      backgroundUrl: "/images/backgrounds/groupL_bg.svg",
-      teams: [
-        { name: "INGLATERRA", flagUrl: "/images/flags/england.svg" },
-        { name: "CROÁCIA", flagUrl: "/images/flags/croatia.svg" },
-        { name: "GANA", flagUrl: "/images/flags/ghana.svg" },
-        { name: "PANAMÁ", flagUrl: "/images/flags/panama.svg" },
-      ],
-    },
-  ];
-  // pink - red - mint - peach - green dark - orange - blue dark - yellow
   return (
-    <div className="w-full flex-1 py-16 px-6 lg:px-12">
-      {/* Título e Texto */}
-      <div className="max-w-7xl mx-auto mb-16 text-center md:text-left">
-        <h2 className="text-4xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md">
-          FASE DE GRUPOS
-        </h2>
-        <p className="text-gray-400 font-noto text-lg max-w-2xl leading-relaxed">
-          Conheça as 48 seleções divididas em 12 grupos. As equipes batalham por
-          uma vaga rumo à glória eterna na Copa do Mundo da FIFA 2026™.
+    <div className="w-full flex-1 flex flex-col justify-center items-center py-16 px-6 lg:px-12">
+      {/* Hero Section */}
+      <div className="max-w-5xl mx-auto text-center mt-10 md:mt-20 mb-20">
+        <h1 className="font-fwc2026 tracking-widest mb-8 flex flex-col items-center gap-2">
+          <span className="text-3xl md:text-4xl text-gray-300 drop-shadow-md">
+            FIFA WORLD CUP
+          </span>
+          <span className="text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+            WE ARE 26
+          </span>
+        </h1>
+        <p className="text-gray-300 font-noto text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
+          Explore as seleções, acompanhe os jogos e descubra as cidades e
+          estádios que sediarão o maior torneio de futebol do planeta.
         </p>
+
+        {/* Call to Action Links */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <Link
+            href="/matches"
+            className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full overflow-hidden transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-1">
+            <Calendar size={20} />
+            <span className="font-noto tracking-wide uppercase">Ver Jogos</span>
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
+          <Link
+            href="/stadiums"
+            className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full border border-white/20 hover:border-white/40 transition-all duration-300 backdrop-blur-sm hover:-translate-y-1">
+            <MapPin size={20} />
+            <span className="font-noto tracking-wide uppercase">
+              Cidades Sede
+            </span>
+          </Link>
+        </div>
       </div>
 
-      {/* Grid de Cards dos Grupos */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {groups.map((group, index) => (
-          <GroupCard
-            key={index}
-            groupName={group.groupName}
-            backgroundUrl={group.backgroundUrl}
-            teams={group.teams}
-          />
-        ))}
+      {/* Feature Cards / Fast Links */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-auto">
+        <Link
+          href="/teams"
+          className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 backdrop-blur-sm">
+          <div className="bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <Users className="text-blue-400" size={32} />
+          </div>
+          <h3 className="text-2xl font-fwc2026 text-white mb-3 tracking-wide">
+            Seleções
+          </h3>
+          <p className="text-gray-400 font-noto">
+            Conheça as 48 equipes batalhando pela glória mundial, divididas em
+            12 grupos.
+          </p>
+        </Link>
+
+        <Link
+          href="/matches"
+          className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 backdrop-blur-sm">
+          <div className="bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <Calendar className="text-blue-400" size={32} />
+          </div>
+          <h3 className="text-2xl font-fwc2026 text-white mb-3 tracking-wide">
+            Jogos
+          </h3>
+          <p className="text-gray-400 font-noto">
+            Acompanhe a tabela completa de partidas, desde a fase de grupos até
+            a grande final.
+          </p>
+        </Link>
+
+        <Link
+          href="/stadiums"
+          className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 backdrop-blur-sm">
+          <div className="bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <MapPin className="text-blue-400" size={32} />
+          </div>
+          <h3 className="text-2xl font-fwc2026 text-white mb-3 tracking-wide">
+            Estádios
+          </h3>
+          <p className="text-gray-400 font-noto">
+            Descubra os estádios e cidades sede que receberão os jogos no
+            Canadá, México e EUA.
+          </p>
+        </Link>
       </div>
     </div>
   );
