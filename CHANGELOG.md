@@ -31,3 +31,7 @@
 - **Matches Page (`/matches`):** Created `MatchCard` component and implemented the match schedule with mock data.
 - **Stadiums Page (`/stadiums`):** Created `StadiumCard` component and implemented the host cities/stadiums layout with mock data.
 - **Navigation:** Updated Header to rename the "Seleções" link to "Grupos e Seleções".
+
+### Added/Changed - 2026-06-08
+
+- **Stadiums Page (`/stadiums`):** Updated stadium's card images.
