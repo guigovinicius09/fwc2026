@@ -30,6 +30,23 @@ export default function Matches() {
       teamB: { name: "TCHÉQUIA", flagUrl: "/images/flags/czechia.svg" },
       status: "upcoming" as const,
     },
+    {
+      matchNumber: 3,
+      stage: "Fase de Grupos - Grupo B",
+      date: "12 de Junho, 2026",
+      time: "15:00 AMT",
+      stadium: "BMO Field",
+      city: "Toronto, CAN",
+      teamA: {
+        name: "CANADÁ",
+        flagUrl: "/images/flags/canada.svg",
+      },
+      teamB: {
+        name: "BÓSNIA E HERZEGOVINA",
+        flagUrl: "/images/flags/bosnia_and_herzegovina.svg",
+      },
+      status: "upcoming" as const,
+    },
   ];
 
   return (

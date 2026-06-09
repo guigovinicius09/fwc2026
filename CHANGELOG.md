@@ -35,3 +35,18 @@
 ### Added/Changed - 2026-06-08
 
 - **Stadiums Page (`/stadiums`):** Updated stadium's card images.
+
+## [Released] v0.1.0
+
+### Initial deploy - 2026-06-08
+
+- Vercel deployment
+
+### Changes - 2026-06-09
+
+#### UI Fix - v0.1.1
+
+- Fixed dropdown menu for mobile menu bar.
+- Fixed matchCard.tsx responsiveness for line breaks and flag alignment.
+- Changed background to official FWC2026 image
+- Changed favicon to official FWC2026 image

@@ -42,7 +42,7 @@ export default function RootLayout({
       <body
         className="min-h-full flex flex-col bg-slate-950/85 bg-blend-overlay"
         style={{
-          backgroundImage: "url('/images/bg_fwc2026.png')",
+          backgroundImage: "url('/images/fwc2026_official.avif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
