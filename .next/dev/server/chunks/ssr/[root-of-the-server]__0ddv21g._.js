@@ -86,7 +86,7 @@ function StadiumCard({ name, city, country, capacity, imageUrl }) {
                 className: "p-5 sm:p-6 relative z-10 -mt-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-2xl font-fwc2026 text-white mb-4 tracking-wide",
+                        className: "text-3xl text-white mb-4 tracking-wide md:font-fwc2026",
                         children: name
                     }, void 0, false, {
                         fileName: "[project]/components/StadiumCard.tsx",
@@ -321,8 +321,8 @@ function Stadiums() {
                 className: "max-w-7xl mx-auto mb-16 text-center md:text-left",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-4xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md uppercase",
-                        children: "Cidades-Sede e Estádios"
+                        className: "text-3xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md uppercase",
+                        children: "Estádios e Cidades-Sede"
                     }, void 0, false, {
                         fileName: "[project]/app/stadiums/page.tsx",
                         lineNumber: 8,
@@ -343,7 +343,7 @@ function Stadiums() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8",
+                className: "max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8",
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2f$stadiums$2e$json$2e5b$json$5d2e$cjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].map((stadium, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StadiumCard$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         ...stadium
                     }, index, false, {

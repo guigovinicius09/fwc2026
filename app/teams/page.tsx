@@ -6,7 +6,7 @@ export default function Teams() {
     <div className="w-full flex-1 py-16 px-6 lg:px-12">
       {/* Título e Texto */}
       <div className="max-w-7xl mx-auto mb-16 text-center md:text-left">
-        <h2 className="text-4xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md">
+        <h2 className="text-3xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md">
           GRUPOS E SELEÇÕES
         </h2>
         <p className="text-gray-400 font-noto text-lg max-w-2xl leading-relaxed">

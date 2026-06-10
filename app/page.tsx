@@ -7,10 +7,10 @@ export default function Home() {
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto text-center mt-10 md:mt-20 mb-20">
         <h1 className="font-fwc2026 tracking-widest mb-8 flex flex-col items-center gap-2">
-          <span className="text-3xl md:text-4xl text-gray-300 drop-shadow-md">
+          <span className="text-4xl md:text-4xl text-gray-300 drop-shadow-md">
             FIFA WORLD CUP
           </span>
-          <span className="text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+          <span className="text-3xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
             WE ARE 26
           </span>
         </h1>

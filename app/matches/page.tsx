@@ -8,7 +8,7 @@ export default function Matches() {
   return (
     <div className="w-full flex-1 py-16 px-6 lg:px-12">
       <div className="max-w-5xl mx-auto mb-16 text-center md:text-left">
-        <h2 className="text-4xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md uppercase">
+        <h2 className="text-2xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md uppercase">
           Calendário de Jogos
         </h2>
         <p className="text-gray-400 font-noto text-lg max-w-2xl leading-relaxed">

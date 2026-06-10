@@ -113,7 +113,7 @@ function MatchCard({ matchNumber, stage, date, time, stadium, city, teamA, teamB
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-fwc2026 text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center",
+                                        className: "text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026",
                                         children: teamA.name
                                     }, void 0, false, {
                                         fileName: "[project]/components/MatchCard.tsx",
@@ -202,7 +202,7 @@ function MatchCard({ matchNumber, stage, date, time, stadium, city, teamA, teamB
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "font-fwc2026 text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center",
+                                        className: "text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026",
                                         children: teamB.name
                                     }, void 0, false, {
                                         fileName: "[project]/components/MatchCard.tsx",
@@ -401,7 +401,7 @@ function Matches() {
                 className: "max-w-5xl mx-auto mb-16 text-center md:text-left",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-4xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md uppercase",
+                        className: "text-2xl md:text-5xl font-fwc2026 text-white tracking-widest mb-4 drop-shadow-md uppercase",
                         children: "Calendário de Jogos"
                     }, void 0, false, {
                         fileName: "[project]/app/matches/page.tsx",

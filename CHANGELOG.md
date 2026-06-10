@@ -36,7 +36,7 @@
 
 - **Stadiums Page (`/stadiums`):** Updated stadium's card images.
 
-## [Released] v0.1.0
+## [Released] v1.0.0
 
 ### Initial deploy - 2026-06-08
 
@@ -44,16 +44,16 @@
 
 ### Changes - 2026-06-09
 
-#### UI Fix - v0.1.1
+#### UI Fix - v1.0.1
 
 - Fixed dropdown menu for mobile menu bar.
 - Fixed matchCard.tsx responsiveness for line breaks and flag alignment.
 - Changed background to official FWC2026 image
 - Changed favicon to official FWC2026 image
 
-## [1.2.0] - 2026-06-10
+### Changes - 2026-06-10
 
-### Refactor
+#### Refactor - v1.0.2
 
 - Migrated hardcoded mock data from `app/teams/page.tsx` and `app/matches/page.tsx` to static JSON files under `lib/data/`
 - Created `lib/data/groups.json` with all 12 groups and 48 teams
@@ -61,3 +61,9 @@
 - Created `lib/data/stadiums.json` with stadiums and host cities data
 - Created `lib/types.ts` defining shared interfaces (`Match`, `MatchTeam`)
 - Pages now import data directly via Server Components, removing inline `const` arrays
+- Changed stadiums pictures to .webp format
+
+#### UI Fix - v1.0.3
+
+- Fixed responsiveness for `/matches`, `/stadiums` and `teams` pages.
+- Fixed `matchCard.tsx` and `StadiumCard.tsx` responsiveness for line breaks and flag alignment.

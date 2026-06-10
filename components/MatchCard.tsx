@@ -59,7 +59,7 @@ export default function MatchCard({
               />
             </div>
             {/* <span className="font-fwc2026 text-white sm:text-lg tracking-wide text-center sm:text-right"> */}
-            <span className="font-fwc2026 text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center">
+            <span className="text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026">
               {teamA.name}
             </span>
           </div>
@@ -88,7 +88,7 @@ export default function MatchCard({
                 className="object-cover"
               />
             </div>
-            <span className="font-fwc2026 text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center">
+            <span className="text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026">
               {teamB.name}
             </span>
           </div>

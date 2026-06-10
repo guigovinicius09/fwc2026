@@ -38,7 +38,7 @@ export default function StadiumCard({
 
       {/* Content */}
       <div className="p-5 sm:p-6 relative z-10 -mt-6">
-        <h3 className="text-2xl font-fwc2026 text-white mb-4 tracking-wide">
+        <h3 className="text-3xl text-white mb-4 tracking-wide md:font-fwc2026">
           {name}
         </h3>
 

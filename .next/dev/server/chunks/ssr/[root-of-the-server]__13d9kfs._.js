@@ -50,7 +50,7 @@ function Home() {
                         className: "font-fwc2026 tracking-widest mb-8 flex flex-col items-center gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-3xl md:text-4xl text-gray-300 drop-shadow-md",
+                                className: "text-4xl md:text-4xl text-gray-300 drop-shadow-md",
                                 children: "FIFA WORLD CUP"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -58,7 +58,7 @@ function Home() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]",
+                                className: "text-3xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]",
                                 children: "WE ARE 26"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
