@@ -1,54 +1,10 @@
+import { Match } from "@/lib/types";
+
 import MatchCard from "@/components/MatchCard";
+import matchesData from "@/lib/data/matches.json";
 
 export default function Matches() {
-  const matches = [
-    {
-      matchNumber: 1,
-      stage: "Fase de Grupos - Grupo A",
-      date: "11 de Junho, 2026",
-      time: "15:00 AMT",
-      stadium: "Estadio Azteca",
-      city: "Cidade do México, MEX",
-      teamA: { name: "MÉXICO", flagUrl: "/images/flags/mexico.svg" },
-      teamB: {
-        name: "ÁFRICA DO SUL",
-        flagUrl: "/images/flags/south_africa.svg",
-      },
-      status: "upcoming" as const,
-    },
-    {
-      matchNumber: 2,
-      stage: "Fase de Grupos - Grupo A",
-      date: "11 de Junho, 2026",
-      time: "22:00 AMT",
-      stadium: "Estadio Akron",
-      city: "Zapopan, MEX",
-      teamA: {
-        name: "COREIA DO SUL",
-        flagUrl: "/images/flags/south_korea.svg",
-      },
-      teamB: { name: "TCHÉQUIA", flagUrl: "/images/flags/czechia.svg" },
-      status: "upcoming" as const,
-    },
-    {
-      matchNumber: 3,
-      stage: "Fase de Grupos - Grupo B",
-      date: "12 de Junho, 2026",
-      time: "15:00 AMT",
-      stadium: "BMO Field",
-      city: "Toronto, CAN",
-      teamA: {
-        name: "CANADÁ",
-        flagUrl: "/images/flags/canada.svg",
-      },
-      teamB: {
-        name: "BÓSNIA E HERZEGOVINA",
-        flagUrl: "/images/flags/bosnia_and_herzegovina.svg",
-      },
-      status: "upcoming" as const,
-    },
-  ];
-
+  const matches = matchesData as Match[];
   return (
     <div className="w-full flex-1 py-16 px-6 lg:px-12">
       <div className="max-w-5xl mx-auto mb-16 text-center md:text-left">
@@ -74,3 +30,54 @@ export default function Matches() {
     </div>
   );
 }
+
+{
+  /*Old code os matches array*/
+}
+// const matches = [
+//   {
+//     matchNumber: 1,
+//     stage: "Fase de Grupos - Grupo A",
+//     date: "11 de Junho, 2026",
+//     time: "15:00 AMT",
+//     stadium: "Estadio Azteca",
+//     city: "Cidade do México, MEX",
+//     teamA: { name: "MÉXICO", flagUrl: "/images/flags/mexico.svg" },
+//     teamB: {
+//       name: "ÁFRICA DO SUL",
+//       flagUrl: "/images/flags/south_africa.svg",
+//     },
+//     status: "upcoming" as const,
+//   },
+//   {
+//     matchNumber: 2,
+//     stage: "Fase de Grupos - Grupo A",
+//     date: "11 de Junho, 2026",
+//     time: "22:00 AMT",
+//     stadium: "Estadio Akron",
+//     city: "Zapopan, MEX",
+//     teamA: {
+//       name: "COREIA DO SUL",
+//       flagUrl: "/images/flags/south_korea.svg",
+//     },
+//     teamB: { name: "TCHÉQUIA", flagUrl: "/images/flags/czechia.svg" },
+//     status: "upcoming" as const,
+//   },
+//   {
+//     matchNumber: 3,
+//     stage: "Fase de Grupos - Grupo B",
+//     date: "12 de Junho, 2026",
+//     time: "15:00 AMT",
+//     stadium: "BMO Field",
+//     city: "Toronto, CAN",
+//     teamA: {
+//       name: "CANADÁ",
+//       flagUrl: "/images/flags/canada.svg",
+//     },
+//     teamB: {
+//       name: "BÓSNIA E HERZEGOVINA",
+//       flagUrl: "/images/flags/bosnia_and_herzegovina.svg",
+//     },
+//     status: "upcoming" as const,
+//   },
+// ];

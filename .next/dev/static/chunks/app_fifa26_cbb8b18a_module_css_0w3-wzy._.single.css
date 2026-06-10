@@ -1,0 +1,25 @@
+/* [project]/app/fifa26_cbb8b18a.module.css [app-client] (css) */
+@font-face {
+  font-family: fifa26;
+  src: url("../media/fifa_26-s.p.0lve1isfrqvb2.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: fifa26 Fallback;
+  src: local(Arial);
+  ascent-override: 65.98%;
+  descent-override: 0.0%;
+  line-gap-override: 0.0%;
+  size-adjust: 165.76%;
+}
+
+.fifa26_cbb8b18a-module__aj8PbW__className {
+  font-family: fifa26, fifa26 Fallback;
+}
+
+.fifa26_cbb8b18a-module__aj8PbW__variable {
+  --font-fifa-26: "fifa26", "fifa26 Fallback";
+}
+
+/*# sourceMappingURL=app_fifa26_cbb8b18a_module_css_0w3-wzy._.single.css.map*/

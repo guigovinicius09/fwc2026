@@ -1,121 +1,7 @@
 import StadiumCard from "@/components/StadiumCard";
+import stadiumsData from "@/lib/data/stadiums.json";
 
 export default function Stadiums() {
-  const stadiums = [
-    {
-      name: "Estadio Azteca",
-      city: "Cidade do México",
-      country: "México",
-      capacity: "83.264",
-      imageUrl: "/images/stadiums/estadio_azteca.png",
-    },
-    {
-      name: "Estádio BBVA",
-      city: "Guadalupe-Monterrey",
-      country: "México",
-      capacity: "53.529",
-      imageUrl: "/images/stadiums/estadio_bbva.png",
-    },
-    {
-      name: "Estádio Akron",
-      city: "Zapopan-Guadalajara",
-      country: "México",
-      capacity: "46.355",
-      imageUrl: "/images/stadiums/estadio_akron.png",
-    },
-    {
-      name: "BMO Field",
-      city: "Toronto",
-      country: "Canadá",
-      capacity: "45.736",
-      imageUrl: "/images/stadiums/estadio_bmoField.png",
-    },
-    {
-      name: "BC Place",
-      city: "Vancouver",
-      country: "Canadá",
-      capacity: "54.500",
-      imageUrl: "/images/stadiums/estadio_bcPlace.png",
-    },
-    {
-      name: "MetLife Stadium",
-      city: "Nova York/Nova Jersey",
-      country: "EUA",
-      capacity: "82.500",
-      imageUrl: "/images/stadiums/estadio_metlife.png",
-    },
-    {
-      name: "AT&T Stadium",
-      city: "Dallas",
-      country: "EUA",
-      capacity: "80.000",
-      imageUrl: "/images/stadiums/estadio_at&t.png",
-    },
-    {
-      name: "Mercedes-Benz Stadium",
-      city: "Atlanta",
-      country: "EUA",
-      capacity: "71.000",
-      imageUrl: "/images/stadiums/estadio_mercedesBenz.png",
-    },
-    {
-      name: "Gillette Stadium",
-      city: "Boston",
-      country: "EUA",
-      capacity: "65.878",
-      imageUrl: "/images/stadiums/estadio_gillette.png",
-    },
-    {
-      name: "NRG Stadium",
-      city: "Houston",
-      country: "EUA",
-      capacity: "72.220",
-      imageUrl: "/images/stadiums/estadio_nrg.png",
-    },
-    {
-      name: "SoFi Stadium",
-      city: "Los Angeles",
-      country: "EUA",
-      capacity: "70.000",
-      imageUrl: "/images/stadiums/estadio_sofi.png",
-    },
-    {
-      name: "Arrowhead Stadium",
-      city: "Kansas City",
-      country: "EUA",
-      capacity: "76.416",
-      imageUrl: "/images/stadiums/estadio_arrowhead.png",
-    },
-    {
-      name: "Hard Rock Stadium",
-      city: "Miami",
-      country: "EUA",
-      capacity: "65.326",
-      imageUrl: "/images/stadiums/estadio_hardRock.png",
-    },
-    {
-      name: "Lincoln Financial Field",
-      city: "Filadélfia",
-      country: "EUA",
-      capacity: "67.594",
-      imageUrl: "/images/stadiums/estadio_lincolnFinancial.png",
-    },
-    {
-      name: "Levi's Stadium",
-      city: "Baía de São Francisco",
-      country: "EUA",
-      capacity: "68.500",
-      imageUrl: "/images/stadiums/estadio_levis.png",
-    },
-    {
-      name: "Lumen Field",
-      city: "Seattle",
-      country: "EUA",
-      capacity: "68.740",
-      imageUrl: "/images/stadiums/estadio_lumenField.png",
-    },
-  ];
-
   return (
     <div className="w-full flex-1 py-16 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto mb-16 text-center md:text-left">
@@ -129,7 +15,7 @@ export default function Stadiums() {
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-        {stadiums.map((stadium, index) => (
+        {stadiumsData.map((stadium, index) => (
           <StadiumCard key={index} {...stadium} />
         ))}
       </div>

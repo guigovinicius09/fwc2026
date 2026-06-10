@@ -1,0 +1,47 @@
+[
+  {
+    "matchNumber": 1,
+    "stage": "Fase de Grupos - Grupo A",
+    "date": "11 de Junho, 2026",
+    "time": "15:00 AMT",
+    "stadium": "Estadio Azteca",
+    "city": "Cidade do México, MEX",
+    "teamA": { "name": "MÉXICO", "flagUrl": "/images/flags/mexico.svg" },
+    "teamB": {
+      "name": "ÁFRICA DO SUL",
+      "flagUrl": "/images/flags/south_africa.svg"
+    },
+    "status": "upcoming"
+  },
+  {
+    "matchNumber": 2,
+    "stage": "Fase de Grupos - Grupo A",
+    "date": "11 de Junho, 2026",
+    "time": "22:00 AMT",
+    "stadium": "Estadio Akron",
+    "city": "Zapopan, MEX",
+    "teamA": {
+      "name": "COREIA DO SUL",
+      "flagUrl": "/images/flags/south_korea.svg"
+    },
+    "teamB": { "name": "TCHÉQUIA", "flagUrl": "/images/flags/czechia.svg" },
+    "status": "upcoming"
+  },
+  {
+    "matchNumber": 3,
+    "stage": "Fase de Grupos - Grupo B",
+    "date": "12 de Junho, 2026",
+    "time": "15:00 AMT",
+    "stadium": "BMO Field",
+    "city": "Toronto, CAN",
+    "teamA": {
+      "name": "CANADÁ",
+      "flagUrl": "/images/flags/canada.svg"
+    },
+    "teamB": {
+      "name": "BÓSNIA E HERZEGOVINA",
+      "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
+    },
+    "status": "upcoming"
+  }
+]

@@ -50,3 +50,14 @@
 - Fixed matchCard.tsx responsiveness for line breaks and flag alignment.
 - Changed background to official FWC2026 image
 - Changed favicon to official FWC2026 image
+
+## [1.2.0] - 2026-06-10
+
+### Refactor
+
+- Migrated hardcoded mock data from `app/teams/page.tsx` and `app/matches/page.tsx` to static JSON files under `lib/data/`
+- Created `lib/data/groups.json` with all 12 groups and 48 teams
+- Created `lib/data/matches.json` with match schedule data
+- Created `lib/data/stadiums.json` with stadiums and host cities data
+- Created `lib/types.ts` defining shared interfaces (`Match`, `MatchTeam`)
+- Pages now import data directly via Server Components, removing inline `const` arrays
