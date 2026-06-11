@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import localFont from "next/font/local";
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 flex flex-col w-full">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
