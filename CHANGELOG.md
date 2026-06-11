@@ -1,69 +1,107 @@
+a partir daqui
+
 # Changelog
 
 > All notable changes to this project will be documented in this file.
+> The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+> and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+---
 
-### Added - 2026-05-21
+## [1.1.3] - 2026-06-11
 
-- Initial project setup with Next.js 16
-- Docker First development workflow
-- Tailwind CSS v4 configuration
+### Added
 
-### Added - 2026-05-25
+- Display of the user's system timezone alongside match time (e.g. "15:00 BRT")
+- Automatic match status detection based on the user's system clock
 
-- Header component
-- Footer component
-- Reusable Group Card component
-- World Cup groups page
+### Changed
 
-### Added - 2026-06-02
+- JSON fields `date`, `time` and `status` replaced by `matchDate` in ISO 8601 UTC format
+- `Match` type in `lib/types.ts` updated to reflect the new `matchDate` field
+- `MatchCard` component now computes `status`, date and time internally from `matchDate`
 
-- Project documentation structure
-- Documentation preparation
-- Documentation folder organization
-- Application pages routing configuration
+---
 
-### Added/Changed - 2026-06-05
+## [1.0.3] - 2026-06-10
 
-- **Homepage (`/`) Redesign:** Added a new Hero section and Fast Links for Matches and Stadiums.
-- **Teams Page (`/teams`):** Migrated the Groups grid from the homepage to this dedicated page.
-- **Matches Page (`/matches`):** Created `MatchCard` component and implemented the match schedule with mock data.
-- **Stadiums Page (`/stadiums`):** Created `StadiumCard` component and implemented the host cities/stadiums layout with mock data.
-- **Navigation:** Updated Header to rename the "Seleções" link to "Grupos e Seleções".
+### Fixed
 
-### Added/Changed - 2026-06-08
+- Responsiveness for `/matches`, `/stadiums` and `/teams` pages
+- Line breaks and flag alignment in `MatchCard` and `StadiumCard` components
 
-- **Stadiums Page (`/stadiums`):** Updated stadium's card images.
+## [1.0.2] - 2026-06-10
 
-## [Released] v1.0.0
-
-### Initial deploy - 2026-06-08
-
-- Vercel deployment
-
-### Changes - 2026-06-09
-
-#### UI Fix - v1.0.1
-
-- Fixed dropdown menu for mobile menu bar.
-- Fixed matchCard.tsx responsiveness for line breaks and flag alignment.
-- Changed background to official FWC2026 image
-- Changed favicon to official FWC2026 image
-
-### Changes - 2026-06-10
-
-#### Refactor - v1.0.2
+### Changed
 
 - Migrated hardcoded mock data from `app/teams/page.tsx` and `app/matches/page.tsx` to static JSON files under `lib/data/`
-- Created `lib/data/groups.json` with all 12 groups and 48 teams
-- Created `lib/data/matches.json` with match schedule data
-- Created `lib/data/stadiums.json` with stadiums and host cities data
-- Created `lib/types.ts` defining shared interfaces (`Match`, `MatchTeam`)
-- Pages now import data directly via Server Components, removing inline `const` arrays
-- Changed stadiums pictures to .webp format
+- Stadium pictures converted to `.webp` format
 
-#### UI Fix - v1.0.3
+### Added
 
-- Fixed responsiveness for `/matches`, `/stadiums` and `teams` pages.
-- Fixed `matchCard.tsx` and `StadiumCard.tsx` responsiveness for line breaks and flag alignment.
+- `lib/data/groups.json` with all 12 groups and 48 teams
+- `lib/data/matches.json` with match schedule data
+- `lib/data/stadiums.json` with stadiums and host cities data
+- `lib/types.ts` defining shared interfaces (`Match`, `MatchTeam`)
+
+## [1.0.1] - 2026-06-09
+
+### Fixed
+
+- Dropdown menu behavior on mobile navigation bar
+- `MatchCard` responsiveness for line breaks and flag alignment
+
+### Changed
+
+- Background updated to official FWC2026 image
+- Favicon updated to official FWC2026 image
+
+## [1.0.0] - 2026-06-08
+
+### Added
+
+- Initial production deployment to Vercel
+
+---
+
+## [0.4.0] - 2026-06-05
+
+### Added
+
+- Hero section and fast links for Matches and Stadiums on homepage (`/`)
+- `MatchCard` component with match schedule using mock data (`/matches`)
+- `StadiumCard` component with host cities and stadiums layout using mock data (`/stadiums`)
+
+### Changed
+
+- Groups grid moved from homepage to dedicated Teams page (`/teams`)
+- Header navigation renamed "Seleções" to "Grupos e Seleções"
+
+## [0.3.0] - 2026-06-08
+
+### Changed
+
+- Updated stadium card images (`/stadiums`)
+
+## [0.2.0] - 2026-06-02
+
+### Added
+
+- Project documentation structure and folder organization
+- Application pages routing configuration
+
+## [0.1.0] - 2026-05-25
+
+### Added
+
+- `Header` and `Footer` components
+- Reusable `GroupCard` component
+- World Cup groups page
+
+## [0.0.1] - 2026-05-21
+
+### Added
+
+- Initial project setup with Next.js 16
+- Docker-first development workflow
+- Tailwind CSS v4 configuration

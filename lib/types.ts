@@ -7,8 +7,7 @@ export interface MatchTeam {
 export interface Match {
   matchNumber: number;
   stage: string;
-  date: string;
-  time: string;
+  matchDate: string; // ISO UTC "2026-06-11T19:00:00Z"
   stadium: string;
   city: string;
   teamA: MatchTeam;

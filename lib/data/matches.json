@@ -2,11 +2,13 @@
   {
     "matchNumber": 1,
     "stage": "Fase de Grupos - Grupo A",
-    "date": "11 de Junho, 2026",
-    "time": "15:00 AMT",
+    "matchDate": "2026-06-11T19:00:00Z",
     "stadium": "Estadio Azteca",
-    "city": "Cidade do México, MEX",
-    "teamA": { "name": "MÉXICO", "flagUrl": "/images/flags/mexico.svg" },
+    "city": "Cidade do México, México",
+    "teamA": {
+      "name": "MÉXICO",
+      "flagUrl": "/images/flags/mexico.svg"
+    },
     "teamB": {
       "name": "ÁFRICA DO SUL",
       "flagUrl": "/images/flags/south_africa.svg"
@@ -16,10 +18,9 @@
   {
     "matchNumber": 2,
     "stage": "Fase de Grupos - Grupo A",
-    "date": "11 de Junho, 2026",
-    "time": "22:00 AMT",
+    "matchDate": "2026-06-12T02:00:00Z",
     "stadium": "Estadio Akron",
-    "city": "Zapopan, MEX",
+    "city": "Zapopan-Guadalajara, México",
     "teamA": {
       "name": "COREIA DO SUL",
       "flagUrl": "/images/flags/south_korea.svg"
@@ -30,10 +31,9 @@
   {
     "matchNumber": 3,
     "stage": "Fase de Grupos - Grupo B",
-    "date": "12 de Junho, 2026",
-    "time": "15:00 AMT",
+    "matchDate": "2026-06-12T19:00:00Z",
     "stadium": "BMO Field",
-    "city": "Toronto, CAN",
+    "city": "Toronto, Canadá",
     "teamA": {
       "name": "CANADÁ",
       "flagUrl": "/images/flags/canada.svg"
@@ -41,6 +41,22 @@
     "teamB": {
       "name": "BÓSNIA E HERZEGOVINA",
       "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
+    },
+    "status": "upcoming"
+  },
+  {
+    "matchNumber": 4,
+    "stage": "Fase de Grupos - Grupo D",
+    "matchDate": "2026-06-13T01:00:00Z",
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles, Estados Unidos",
+    "teamA": {
+      "name": "ESTADOS UNIDOS",
+      "flagUrl": "/images/flags/usa.svg"
+    },
+    "teamB": {
+      "name": "PARAGUAI",
+      "flagUrl": "/images/flags/paraguay.svg"
     },
     "status": "upcoming"
   }

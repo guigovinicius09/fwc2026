@@ -10,26 +10,59 @@ interface MatchTeam {
 interface MatchCardProps {
   matchNumber: number;
   stage: string;
-  date: string;
-  time: string;
+  matchDate: string;
   stadium: string;
   city: string;
   teamA: MatchTeam;
   teamB: MatchTeam;
-  status?: "upcoming" | "live" | "finished";
+}
+
+function getMatchStatus(matchDate: string): "upcoming" | "live" | "finished" {
+  const now = new Date();
+  const start = new Date(matchDate);
+  const end = new Date(start.getTime() + 105 * 60 * 1000); // 90min + 15min intervalo
+
+  if (now < start) return "upcoming";
+  if (now >= start && now <= end) return "live";
+  return "finished";
+}
+
+function formatMatchDate(matchDate: string): string {
+  return new Date(matchDate).toLocaleDateString("pt-BR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+function formatMatchTime(matchDate: string): string {
+  const date = new Date(matchDate);
+
+  const time = date.toLocaleTimeString("pt-BR", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+
+  const timezone =
+    new Intl.DateTimeFormat("pt-BR", { timeZoneName: "short" })
+      .formatToParts(date)
+      .find((p) => p.type === "timeZoneName")?.value ?? "";
+
+  return `${time} ${timezone}`;
 }
 
 export default function MatchCard({
   matchNumber,
   stage,
-  date,
-  time,
+  matchDate,
   stadium,
   city,
   teamA,
   teamB,
-  status = "upcoming",
 }: MatchCardProps) {
+  const status = getMatchStatus(matchDate);
+
   return (
     <div className="relative w-full bg-[#0a0f1a] border border-white/10 overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-lg">
       {/* Header */}
@@ -58,7 +91,6 @@ export default function MatchCard({
                 className="object-cover"
               />
             </div>
-            {/* <span className="font-fwc2026 text-white sm:text-lg tracking-wide text-center sm:text-right"> */}
             <span className="text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026">
               {teamA.name}
             </span>
@@ -75,7 +107,9 @@ export default function MatchCard({
                 <span>{teamB.score}</span>
               </div>
             )}
-            <span className="text-blue-400 text-xs font-bold mt-1">{time}</span>
+            <span className="text-blue-400 text-xs font-bold mt-1">
+              {formatMatchTime(matchDate)}
+            </span>
           </div>
 
           {/* Team B */}
@@ -101,7 +135,7 @@ export default function MatchCard({
         <div className="flex flex-row md:flex-col gap-6 md:gap-2 min-w-[200px] text-sm text-gray-400 font-noto">
           <div className="flex items-center gap-2">
             <Calendar size={16} className="text-blue-500" />
-            <span>{date}</span>
+            <span>{formatMatchDate(matchDate)}</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin size={16} className="text-blue-500" />
