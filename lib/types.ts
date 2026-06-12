@@ -1,7 +1,6 @@
 export interface MatchTeam {
   name: string;
   flagUrl: string;
-  score?: number;
 }
 
 export interface Match {
@@ -12,5 +11,5 @@ export interface Match {
   city: string;
   teamA: MatchTeam;
   teamB: MatchTeam;
-  status?: "upcoming" | "live" | "finished";
+  footballDataId: number; // Match ID at football-data.org
 }

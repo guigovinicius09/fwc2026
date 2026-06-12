@@ -1,34 +1,5 @@
 [
   {
-    "matchNumber": 1,
-    "stage": "Fase de Grupos - Grupo A",
-    "matchDate": "2026-06-11T19:00:00Z",
-    "stadium": "Estadio Azteca",
-    "city": "Cidade do México, México",
-    "teamA": {
-      "name": "MÉXICO",
-      "flagUrl": "/images/flags/mexico.svg"
-    },
-    "teamB": {
-      "name": "ÁFRICA DO SUL",
-      "flagUrl": "/images/flags/south_africa.svg"
-    },
-    "status": "upcoming"
-  },
-  {
-    "matchNumber": 2,
-    "stage": "Fase de Grupos - Grupo A",
-    "matchDate": "2026-06-12T02:00:00Z",
-    "stadium": "Estadio Akron",
-    "city": "Zapopan-Guadalajara, México",
-    "teamA": {
-      "name": "COREIA DO SUL",
-      "flagUrl": "/images/flags/south_korea.svg"
-    },
-    "teamB": { "name": "TCHÉQUIA", "flagUrl": "/images/flags/czechia.svg" },
-    "status": "upcoming"
-  },
-  {
     "matchNumber": 3,
     "stage": "Fase de Grupos - Grupo B",
     "matchDate": "2026-06-12T19:00:00Z",
@@ -42,7 +13,7 @@
       "name": "BÓSNIA E HERZEGOVINA",
       "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
     },
-    "status": "upcoming"
+    "footballDataId": 537333
   },
   {
     "matchNumber": 4,
@@ -58,6 +29,35 @@
       "name": "PARAGUAI",
       "flagUrl": "/images/flags/paraguay.svg"
     },
-    "status": "upcoming"
+    "footballDataId": 537345
+  },
+  {
+    "matchNumber": 2,
+    "stage": "Fase de Grupos - Grupo A",
+    "matchDate": "2026-06-12T02:00:00Z",
+    "stadium": "Estadio Akron",
+    "city": "Zapopan-Guadalajara, México",
+    "teamA": {
+      "name": "COREIA DO SUL",
+      "flagUrl": "/images/flags/south_korea.svg"
+    },
+    "teamB": { "name": "TCHÉQUIA", "flagUrl": "/images/flags/czechia.svg" },
+    "footballDataId": 537328
+  },
+  {
+    "matchNumber": 1,
+    "stage": "Fase de Grupos - Grupo A",
+    "matchDate": "2026-06-11T19:00:00Z",
+    "stadium": "Estadio Azteca",
+    "city": "Cidade do México, México",
+    "teamA": {
+      "name": "MÉXICO",
+      "flagUrl": "/images/flags/mexico.svg"
+    },
+    "teamB": {
+      "name": "ÁFRICA DO SUL",
+      "flagUrl": "/images/flags/south_africa.svg"
+    },
+    "footballDataId": 537327
   }
 ]
