@@ -1,33 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { Calendar, MapPin, Clock } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
+import { useMatchResult } from "@/hooks/useMatchResult";
+import type { Match } from "@/lib/types";
 
-interface MatchTeam {
-  name: string;
-  flagUrl: string;
-  score?: number;
-}
+interface MatchCardProps extends Match {}
 
-interface MatchCardProps {
-  matchNumber: number;
-  stage: string;
-  matchDate: string;
-  stadium: string;
-  city: string;
-  teamA: MatchTeam;
-  teamB: MatchTeam;
-}
+// interface MatchTeam {
+//   name: string;
+//   flagUrl: string;
+// }
 
-function getMatchStatus(matchDate: string): "upcoming" | "live" | "finished" {
-  const now = new Date();
-  const start = new Date(matchDate);
-  const end = new Date(start.getTime() + 105 * 60 * 1000); // 90min + 15min intervalo
-
-  if (now < start) return "upcoming";
-  if (now >= start && now <= end) return "live";
-  return "finished";
-}
+// interface MatchCardProps {
+//   matchNumber: number;
+//   stage: string;
+//   matchDate: string;
+//   stadium: string;
+//   city: string;
+//   teamA: MatchTeam;
+//   teamB: MatchTeam;
+//   footballDataId?: number;
+// }
 
 function formatMatchDate(matchDate: string): string {
   return new Date(matchDate).toLocaleDateString("pt-BR", {
@@ -39,7 +33,6 @@ function formatMatchDate(matchDate: string): string {
 
 function formatMatchTime(matchDate: string): string {
   const date = new Date(matchDate);
-
   const time = date.toLocaleTimeString("pt-BR", {
     hour: "2-digit",
     minute: "2-digit",
@@ -54,6 +47,16 @@ function formatMatchTime(matchDate: string): string {
   return `${time} ${timezone}`;
 }
 
+// function getMatchStatus(matchDate: string): "upcoming" | "live" | "finished" {
+//   const now = new Date();
+//   const start = new Date(matchDate);
+//   const end = new Date(start.getTime() + 105 * 60 * 1000); // 90min + 15min intervalo
+
+//   if (now < start) return "upcoming";
+//   if (now >= start && now <= end) return "live";
+//   return "finished";
+// }
+
 export default function MatchCard({
   matchNumber,
   stage,
@@ -62,8 +65,12 @@ export default function MatchCard({
   city,
   teamA,
   teamB,
+  footballDataId,
 }: MatchCardProps) {
-  const status = getMatchStatus(matchDate);
+  const result = useMatchResult(footballDataId, matchDate);
+  const isLive = result?.status === "IN_PLAY" || result?.status === "PAUSED";
+  const isFinished = result?.status === "FINISHED";
+  const showScore = isLive || isFinished;
 
   return (
     <div className="relative w-full bg-[#0a0f1a] border border-white/10 overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-lg">
@@ -72,12 +79,12 @@ export default function MatchCard({
         <span>
           Jogo {matchNumber} • {stage}
         </span>
-        {status === "live" && (
+        {isLive && (
           <span className="text-red-500 font-bold flex items-center gap-1 animate-pulse">
             <span className="w-2 h-2 bg-red-500 rounded-full"></span> AO VIVO
           </span>
         )}
-        {status === "finished" && <span>ENCERRADO</span>}
+        {isFinished && <span>ENCERRADO</span>}
       </div>
 
       <div className="p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -100,14 +107,14 @@ export default function MatchCard({
 
           {/* VS or Score */}
           <div className="flex flex-col items-center justify-center min-w-[80px]">
-            {status === "upcoming" ? (
-              <span className="text-gray-500 font-fwc2026 text-xl">VS</span>
-            ) : (
+            {showScore ? (
               <div className="flex items-center gap-3 text-3xl font-fwc2026 text-white">
-                <span>{teamA.score}</span>
+                <span>{result?.score.home}</span>
                 <span className="text-gray-500">-</span>
-                <span>{teamB.score}</span>
+                <span>{result?.score.away}</span>
               </div>
+            ) : (
+              <span className="text-gray-500 font-fwc2026 text-xl">VS</span>
             )}
             <span className="text-blue-400 text-xs font-bold mt-1">
               {formatMatchTime(matchDate)}

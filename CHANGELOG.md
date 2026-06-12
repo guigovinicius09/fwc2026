@@ -8,6 +8,19 @@ a partir daqui
 
 ---
 
+## [1.2.3] - 2026-06-12
+
+### Added
+
+- Integrated football-data.org API for automatic FIFA World Cup 2026 match result updates.
+- Added dynamic match result endpoint using football-data.org match IDs.
+- Added live match status support (`IN_PLAY`, `PAUSED`, `FINISHED`, `POSTPONED`, `CANCELLED`).
+
+### Changed
+
+- Match results are now retrieved dynamically instead of requiring manual updates to match data files.
+- Added automatic score refresh every 60 seconds for active matches.
+
 ## [1.1.3] - 2026-06-11
 
 ### Added
