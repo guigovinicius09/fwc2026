@@ -1,19 +1,67 @@
 [
   {
-    "matchNumber": 3,
+    "matchNumber": 5,
     "stage": "Fase de Grupos - Grupo B",
-    "matchDate": "2026-06-12T19:00:00Z",
-    "stadium": "BMO Field",
-    "city": "Toronto, Canadá",
+    "matchDate": "2026-06-13T19:00:00Z",
+    "stadium": "Levi's Stadium",
+    "city": "Santa Clara, Estados Unidos",
     "teamA": {
-      "name": "CANADÁ",
-      "flagUrl": "/images/flags/canada.svg"
+      "name": "QATAR",
+      "flagUrl": "/images/flags/qatar.svg"
     },
     "teamB": {
-      "name": "BÓSNIA E HERZEGOVINA",
-      "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
+      "name": "SUÍÇA",
+      "flagUrl": "/images/flags/switzerland.svg"
     },
-    "footballDataId": 537333
+    "footballDataId": 537334
+  },
+  {
+    "matchNumber": 6,
+    "stage": "Fase de Grupos - Grupo C",
+    "matchDate": "2026-06-13T22:00:00Z",
+    "stadium": "MetLife Stadium",
+    "city": "Nova Jersey, Estados Unidos",
+    "teamA": {
+      "name": "BRASIL",
+      "flagUrl": "/images/flags/brazil.svg"
+    },
+    "teamB": {
+      "name": "MARROCOS",
+      "flagUrl": "/images/flags/morocco.svg"
+    },
+    "footballDataId": 537339
+  },
+  {
+    "matchNumber": 7,
+    "stage": "Fase de Grupos - Grupo C",
+    "matchDate": "2026-06-14T01:00:00Z",
+    "stadium": "Gillette Stadium",
+    "city": "Boston, Estados Unidos",
+    "teamA": {
+      "name": "HAITI",
+      "flagUrl": "/images/flags/haiti.svg"
+    },
+    "teamB": {
+      "name": "ESCÓCIA",
+      "flagUrl": "/images/flags/scotland.svg"
+    },
+    "footballDataId": 537340
+  },
+  {
+    "matchNumber": 8,
+    "stage": "Fase de Grupos - Grupo D",
+    "matchDate": "2026-06-14T04:00:00Z",
+    "stadium": "BC Place",
+    "city": "Vancouver, Canadá",
+    "teamA": {
+      "name": "AUSTRÁLIA",
+      "flagUrl": "/images/flags/australia.svg"
+    },
+    "teamB": {
+      "name": "TURQUIA",
+      "flagUrl": "/images/flags/turkey.svg"
+    },
+    "footballDataId": 537346
   },
   {
     "matchNumber": 4,
@@ -30,6 +78,22 @@
       "flagUrl": "/images/flags/paraguay.svg"
     },
     "footballDataId": 537345
+  },
+  {
+    "matchNumber": 3,
+    "stage": "Fase de Grupos - Grupo B",
+    "matchDate": "2026-06-12T19:00:00Z",
+    "stadium": "BMO Field",
+    "city": "Toronto, Canadá",
+    "teamA": {
+      "name": "CANADÁ",
+      "flagUrl": "/images/flags/canada.svg"
+    },
+    "teamB": {
+      "name": "BÓSNIA E HERZEGOVINA",
+      "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
+    },
+    "footballDataId": 537333
   },
   {
     "matchNumber": 2,
