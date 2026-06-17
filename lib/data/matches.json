@@ -61,22 +61,6 @@
     "footballDataId": 537339
   },
   {
-    "matchNumber": 7,
-    "stage": "Fase de Grupos - Grupo C",
-    "matchDate": "2026-06-14T01:00:00Z",
-    "stadium": "Gillette Stadium",
-    "city": "Boston, Estados Unidos",
-    "teamA": {
-      "name": "HAITI",
-      "flagUrl": "/images/flags/haiti.svg"
-    },
-    "teamB": {
-      "name": "ESCÓCIA",
-      "flagUrl": "/images/flags/scotland.svg"
-    },
-    "footballDataId": 537340
-  },
-  {
     "matchNumber": 4,
     "stage": "Fase de Grupos - Grupo D",
     "matchDate": "2026-06-13T01:00:00Z",
@@ -109,6 +93,22 @@
     "footballDataId": 537334
   },
   {
+    "matchNumber": 7,
+    "stage": "Fase de Grupos - Grupo C",
+    "matchDate": "2026-06-14T01:00:00Z",
+    "stadium": "Gillette Stadium",
+    "city": "Boston, Estados Unidos",
+    "teamA": {
+      "name": "HAITI",
+      "flagUrl": "/images/flags/haiti.svg"
+    },
+    "teamB": {
+      "name": "ESCÓCIA",
+      "flagUrl": "/images/flags/scotland.svg"
+    },
+    "footballDataId": 537340
+  },
+  {
     "matchNumber": 8,
     "stage": "Fase de Grupos - Grupo D",
     "matchDate": "2026-06-14T04:00:00Z",
@@ -123,24 +123,201 @@
       "flagUrl": "/images/flags/turkey.svg"
     },
     "footballDataId": 537346
-  },{
+  },
+  {
     "matchNumber": 9,
     "stage": "Fase de Grupos - Grupo E",
-    "matchDate": "2026-06-13T22:00:00Z",
+    "matchDate": "2026-06-14T17:00:00Z",
+    "stadium": "NRG Stadium",
+    "city": "Houston, Estados Unidos",
+    "teamA": {
+      "name": "ALEMANHA",
+      "flagUrl": "/images/flags/germany.svg"
+    },
+    "teamB": {
+      "name": "CURAÇAO",
+      "flagUrl": "/images/flags/curacao.svg"
+    },
+    "footballDataId": 537351
+  },
+  {
+    "matchNumber": 10,
+    "stage": "Fase de Grupos - Grupo F",
+    "matchDate": "2026-06-14T20:00:00Z",
+    "stadium": "AT&T Stadium",
+    "city": "Dallas, Estados Unidos",
+    "teamA": {
+      "name": "PAÍSES BAIXOS",
+      "flagUrl": "/images/flags/netherlands.svg"
+    },
+    "teamB": {
+      "name": "JAPÃO",
+      "flagUrl": "/images/flags/japan.svg"
+    },
+    "footballDataId": 537357
+  },
+  {
+    "matchNumber": 11,
+    "stage": "Fase de Grupos - Grupo E",
+    "matchDate": "2026-06-14T23:00:00Z",
+    "stadium": "Lincoln Financial Fields",
+    "city": "Filadélfia, Estados Unidos",
+    "teamA": {
+      "name": "COSTA DO MARFIM",
+      "flagUrl": "/images/flags/cote_d_ivoire.svg"
+    },
+    "teamB": {
+      "name": "EQUADOR",
+      "flagUrl": "/images/flags/ecuador.svg"
+    },
+    "footballDataId": 537352
+  },
+  {
+    "matchNumber": 12,
+    "stage": "Fase de Grupos - Grupo F",
+    "matchDate": "2026-06-15T00:00:00Z",
+    "stadium": "Estádio BBVA",
+    "city": "Monterrey, México",
+    "teamA": {
+      "name": "SUÉCIA",
+      "flagUrl": "/images/flags/sweden.svg"
+    },
+    "teamB": {
+      "name": "TUNISIA",
+      "flagUrl": "/images/flags/tunisia.svg"
+    },
+    "footballDataId": 537358
+  },
+  {
+    "matchNumber": 14,
+    "stage": "Fase de Grupos - Grupo G",
+    "matchDate": "2026-06-15T19:00:00Z",
+    "stadium": "Lumen Field",
+    "city": "Seattle, Estados Unidos",
+    "teamA": {
+      "name": "BÉLGICA",
+      "flagUrl": "/images/flags/belgium.svg"
+    },
+    "teamB": {
+      "name": "EGITO",
+      "flagUrl": "/images/flags/egypt.svg"
+    },
+    "footballDataId": 537363
+  },
+  {
+    "matchNumber": 13,
+    "stage": "Fase de Grupos - Grupo H",
+    "matchDate": "2026-06-15T16:00:00Z",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta, Estados Unidos",
+    "teamA": {
+      "name": "ESPANHA",
+      "flagUrl": "/images/flags/spain.svg"
+    },
+    "teamB": {
+      "name": "CABO VERDE",
+      "flagUrl": "/images/flags/cabo_verde.svg"
+    },
+    "footballDataId": 537369
+  },
+  {
+    "matchNumber": 15,
+    "stage": "Fase de Grupos - Grupo H",
+    "matchDate": "2026-06-15T22:00:00Z",
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami, Estados Unidos",
+    "teamA": {
+      "name": "ARÁBIA SAUDITA",
+      "flagUrl": "/images/flags/saudi_arabia.svg"
+    },
+    "teamB": {
+      "name": "URUGUAI",
+      "flagUrl": "/images/flags/uruguay.svg"
+    },
+    "footballDataId": 537370
+  },
+  {
+    "matchNumber": 16,
+    "stage": "Fase de Grupos - Grupo G",
+    "matchDate": "2026-06-16T01:00:00Z",
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles, Estados Unidos",
+    "teamA": {
+      "name": "Irã",
+      "flagUrl": "/images/flags/iran.svg"
+    },
+    "teamB": {
+      "name": "NOVA ZELÂNDIA",
+      "flagUrl": "/images/flags/new_zealand.svg"
+    },
+    "footballDataId": 537364
+  },
+  {
+    "matchNumber": 17,
+    "stage": "Fase de Grupos - Grupo I",
+    "matchDate": "2026-06-15T19:00:00Z",
     "stadium": "MetLife Stadium",
     "city": "Nova Jersey, Estados Unidos",
     "teamA": {
-      "name": "BRASIL",
-      "flagUrl": "/images/flags/brazil.svg"
+      "name": "FRANÇA",
+      "flagUrl": "/images/flags/france.svg"
     },
     "teamB": {
-      "name": "MARROCOS",
-      "flagUrl": "/images/flags/morocco.svg"
+      "name": "SENEGAL",
+      "flagUrl": "/images/flags/senegal.svg"
     },
-    "footballDataId": 537339
+    "footballDataId": 537391
   },
   {
-    "matchNumber": 7,
+    "matchNumber": 18,
+    "stage": "Fase de Grupos - Grupo I",
+    "matchDate": "2026-06-16T22:00:00Z",
+    "stadium": "Gillette Stadium",
+    "city": "Boston, Estados Unidos",
+    "teamA": {
+      "name": "IRAQUE",
+      "flagUrl": "/images/flags/iraq.svg"
+    },
+    "teamB": {
+      "name": "NORUEGA",
+      "flagUrl": "/images/flags/norway.svg"
+    },
+    "footballDataId": 537392
+  },
+  {
+    "matchNumber": 19,
+    "stage": "Fase de Grupos - Grupo J",
+    "matchDate": "2026-06-17T01:00:00Z",
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City, Estados Unidos",
+    "teamA": {
+      "name": "ARGENTINA",
+      "flagUrl": "/images/flags/argentina.svg"
+    },
+    "teamB": {
+      "name": "ARGÉLIA",
+      "flagUrl": "/images/flags/algeria.svg"
+    },
+    "footballDataId": 537397
+  },
+  {
+    "matchNumber": 20,
+    "stage": "Fase de Grupos - Grupo J",
+    "matchDate": "2026-06-17T04:00:00Z",
+    "stadium": "Levi's Stadium",
+    "city": "Santa Clara, Estados Unidos",
+    "teamA": {
+      "name": "Áustria",
+      "flagUrl": "/images/flags/austria.svg"
+    },
+    "teamB": {
+      "name": "Jordânia",
+      "flagUrl": "/images/flags/jordan.svg"
+    },
+    "footballDataId": 537398
+  },
+  {
+    "matchNumber": 21,
     "stage": "Fase de Grupos - Grupo K",
     "matchDate": "2026-06-17T17:00:00Z",
     "stadium": "NRG Stadium",
@@ -154,5 +331,53 @@
       "flagUrl": "/images/flags/congo_dr.svg"
     },
     "footballDataId": 537403
+  },
+  {
+    "matchNumber": 22,
+    "stage": "Fase de Grupos - Grupo L",
+    "matchDate": "2026-06-14T20:00:00Z",
+    "stadium": "AT&T Stadium",
+    "city": "Dallas, Estados Unidos",
+    "teamA": {
+      "name": "INGLATERRA",
+      "flagUrl": "/images/flags/england.svg"
+    },
+    "teamB": {
+      "name": "CROÁCIA",
+      "flagUrl": "/images/flags/croatia.svg"
+    },
+    "footballDataId": 537409
+  },
+  {
+    "matchNumber": 23,
+    "stage": "Fase de Grupos - Grupo L",
+    "matchDate": "2026-06-17T23:00:00Z",
+    "stadium": "BMO Field",
+    "city": "Toronto, Canadá",
+    "teamA": {
+      "name": "GANA",
+      "flagUrl": "/images/flags/ghana.svg"
+    },
+    "teamB": {
+      "name": "PANAMÁ",
+      "flagUrl": "/images/flags/panama.svg"
+    },
+    "footballDataId": 537410
+  },
+  {
+    "matchNumber": 24,
+    "stage": "Fase de Grupos - Grupo K",
+    "matchDate": "2026-06-18T02:00:00Z",
+    "stadium": "Estádio Azteca",
+    "city": "Cidade do México, México",
+    "teamA": {
+      "name": "UZBEQUISTÃO",
+      "flagUrl": "/images/flags/uzbekistan.svg"
+    },
+    "teamB": {
+      "name": "COLOMBIA",
+      "flagUrl": "/images/flags/colombia.svg"
+    },
+    "footballDataId": 537404
   }
 ]

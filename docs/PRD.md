@@ -76,8 +76,8 @@ User can:
 - View date
 - View time
 - View stadium
-- View city
 - View participating teams
+- View city
 
 ### 6.3 Stadiums
 
@@ -119,11 +119,11 @@ The MVP will be considered complete when:
 - Matches
 - Stadiums
 
-### Version 1.1
+<!-- ### Version 1.1
 
 - Globe 3D
 - Host cities visualization
-- Participating countries visualization
+- Participating countries visualization -->
 
 ## 10. :books: Learning Objectives
 

@@ -8,6 +8,13 @@ a partir daqui
 
 ---
 
+## [1.3.1] 2026-06-17
+
+### Changed
+
+- Responsiveness fix for the finished matches page (`/matchesFinalized`)
+- JSON data update for the first round of games
+
 ## [1.3.0] - 2026-06-17
 
 ### Added

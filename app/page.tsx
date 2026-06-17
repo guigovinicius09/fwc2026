@@ -60,17 +60,16 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/matches"
+          href="/matchesFinalized"
           className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 backdrop-blur-sm">
           <div className="bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
             <Calendar className="text-blue-400" size={32} />
           </div>
           <h3 className="text-2xl font-fwc2026 text-white mb-3 tracking-wide">
-            Jogos
+            Jogos Encerrados
           </h3>
           <p className="text-gray-400 font-noto">
-            Acompanhe a tabela completa de partidas, desde a fase de grupos até
-            a grande final.
+            Acompanhe o resultado das rodadas passadas.
           </p>
         </Link>
 
