@@ -18,7 +18,7 @@
   {
     "matchNumber": 2,
     "stage": "Fase de Grupos - Grupo A",
-    "matchDate": "2026-06-12T02:00:00Z",
+    "matchDate": "2026-06-11T02:00:00Z",
     "stadium": "Estadio Akron",
     "city": "Zapopan-Guadalajara, México",
     "teamA": {
@@ -47,7 +47,7 @@
   {
     "matchNumber": 6,
     "stage": "Fase de Grupos - Grupo C",
-    "matchDate": "2026-06-13T22:00:00Z",
+    "matchDate": "2026-06-12T22:00:00Z",
     "stadium": "MetLife Stadium",
     "city": "Nova Jersey, Estados Unidos",
     "teamA": {
@@ -255,7 +255,7 @@
   {
     "matchNumber": 17,
     "stage": "Fase de Grupos - Grupo I",
-    "matchDate": "2026-06-15T19:00:00Z",
+    "matchDate": "2026-06-16T19:00:00Z",
     "stadium": "MetLife Stadium",
     "city": "Nova Jersey, Estados Unidos",
     "teamA": {
@@ -335,7 +335,7 @@
   {
     "matchNumber": 22,
     "stage": "Fase de Grupos - Grupo L",
-    "matchDate": "2026-06-14T20:00:00Z",
+    "matchDate": "2026-06-17T20:00:00Z",
     "stadium": "AT&T Stadium",
     "city": "Dallas, Estados Unidos",
     "teamA": {
