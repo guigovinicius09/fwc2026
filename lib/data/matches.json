@@ -1,19 +1,48 @@
 [
   {
-    "matchNumber": 5,
-    "stage": "Fase de Grupos - Grupo B",
-    "matchDate": "2026-06-13T19:00:00Z",
-    "stadium": "Levi's Stadium",
-    "city": "Santa Clara, Estados Unidos",
+    "matchNumber": 1,
+    "stage": "Fase de Grupos - Grupo A",
+    "matchDate": "2026-06-11T19:00:00Z",
+    "stadium": "Estadio Azteca",
+    "city": "Cidade do México, México",
     "teamA": {
-      "name": "QATAR",
-      "flagUrl": "/images/flags/qatar.svg"
+      "name": "MÉXICO",
+      "flagUrl": "/images/flags/mexico.svg"
     },
     "teamB": {
-      "name": "SUÍÇA",
-      "flagUrl": "/images/flags/switzerland.svg"
+      "name": "ÁFRICA DO SUL",
+      "flagUrl": "/images/flags/south_africa.svg"
     },
-    "footballDataId": 537334
+    "footballDataId": 537327
+  },
+  {
+    "matchNumber": 2,
+    "stage": "Fase de Grupos - Grupo A",
+    "matchDate": "2026-06-12T02:00:00Z",
+    "stadium": "Estadio Akron",
+    "city": "Zapopan-Guadalajara, México",
+    "teamA": {
+      "name": "COREIA DO SUL",
+      "flagUrl": "/images/flags/south_korea.svg"
+    },
+    "teamB": { "name": "TCHÉQUIA", "flagUrl": "/images/flags/czechia.svg" },
+    "footballDataId": 537328
+  },
+  {
+    "matchNumber": 3,
+    "stage": "Fase de Grupos - Grupo B",
+    "matchDate": "2026-06-12T19:00:00Z",
+    "stadium": "BMO Field",
+    "city": "Toronto, Canadá",
+    "teamA": {
+      "name": "CANADÁ",
+      "flagUrl": "/images/flags/canada.svg"
+    },
+    "teamB": {
+      "name": "BÓSNIA E HERZEGOVINA",
+      "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
+    },
+    "footballDataId": 537333
   },
   {
     "matchNumber": 6,
@@ -48,22 +77,6 @@
     "footballDataId": 537340
   },
   {
-    "matchNumber": 8,
-    "stage": "Fase de Grupos - Grupo D",
-    "matchDate": "2026-06-14T04:00:00Z",
-    "stadium": "BC Place",
-    "city": "Vancouver, Canadá",
-    "teamA": {
-      "name": "AUSTRÁLIA",
-      "flagUrl": "/images/flags/australia.svg"
-    },
-    "teamB": {
-      "name": "TURQUIA",
-      "flagUrl": "/images/flags/turkey.svg"
-    },
-    "footballDataId": 537346
-  },
-  {
     "matchNumber": 4,
     "stage": "Fase de Grupos - Grupo D",
     "matchDate": "2026-06-13T01:00:00Z",
@@ -80,48 +93,66 @@
     "footballDataId": 537345
   },
   {
-    "matchNumber": 3,
+    "matchNumber": 5,
     "stage": "Fase de Grupos - Grupo B",
-    "matchDate": "2026-06-12T19:00:00Z",
-    "stadium": "BMO Field",
-    "city": "Toronto, Canadá",
+    "matchDate": "2026-06-13T19:00:00Z",
+    "stadium": "Levi's Stadium",
+    "city": "Santa Clara, Estados Unidos",
     "teamA": {
-      "name": "CANADÁ",
-      "flagUrl": "/images/flags/canada.svg"
+      "name": "QATAR",
+      "flagUrl": "/images/flags/qatar.svg"
     },
     "teamB": {
-      "name": "BÓSNIA E HERZEGOVINA",
-      "flagUrl": "/images/flags/bosnia_and_herzegovina.svg"
+      "name": "SUÍÇA",
+      "flagUrl": "/images/flags/switzerland.svg"
     },
-    "footballDataId": 537333
+    "footballDataId": 537334
   },
   {
-    "matchNumber": 2,
-    "stage": "Fase de Grupos - Grupo A",
-    "matchDate": "2026-06-12T02:00:00Z",
-    "stadium": "Estadio Akron",
-    "city": "Zapopan-Guadalajara, México",
+    "matchNumber": 8,
+    "stage": "Fase de Grupos - Grupo D",
+    "matchDate": "2026-06-14T04:00:00Z",
+    "stadium": "BC Place",
+    "city": "Vancouver, Canadá",
     "teamA": {
-      "name": "COREIA DO SUL",
-      "flagUrl": "/images/flags/south_korea.svg"
-    },
-    "teamB": { "name": "TCHÉQUIA", "flagUrl": "/images/flags/czechia.svg" },
-    "footballDataId": 537328
-  },
-  {
-    "matchNumber": 1,
-    "stage": "Fase de Grupos - Grupo A",
-    "matchDate": "2026-06-11T19:00:00Z",
-    "stadium": "Estadio Azteca",
-    "city": "Cidade do México, México",
-    "teamA": {
-      "name": "MÉXICO",
-      "flagUrl": "/images/flags/mexico.svg"
+      "name": "AUSTRÁLIA",
+      "flagUrl": "/images/flags/australia.svg"
     },
     "teamB": {
-      "name": "ÁFRICA DO SUL",
-      "flagUrl": "/images/flags/south_africa.svg"
+      "name": "TURQUIA",
+      "flagUrl": "/images/flags/turkey.svg"
     },
-    "footballDataId": 537327
+    "footballDataId": 537346
+  },{
+    "matchNumber": 9,
+    "stage": "Fase de Grupos - Grupo E",
+    "matchDate": "2026-06-13T22:00:00Z",
+    "stadium": "MetLife Stadium",
+    "city": "Nova Jersey, Estados Unidos",
+    "teamA": {
+      "name": "BRASIL",
+      "flagUrl": "/images/flags/brazil.svg"
+    },
+    "teamB": {
+      "name": "MARROCOS",
+      "flagUrl": "/images/flags/morocco.svg"
+    },
+    "footballDataId": 537339
+  },
+  {
+    "matchNumber": 7,
+    "stage": "Fase de Grupos - Grupo K",
+    "matchDate": "2026-06-17T17:00:00Z",
+    "stadium": "NRG Stadium",
+    "city": "Houston, Estados Unidos",
+    "teamA": {
+      "name": "PORTUGAL",
+      "flagUrl": "/images/flags/portugal.svg"
+    },
+    "teamB": {
+      "name": "RD CONGO",
+      "flagUrl": "/images/flags/congo_dr.svg"
+    },
+    "footballDataId": 537403
   }
 ]

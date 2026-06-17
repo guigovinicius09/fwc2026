@@ -8,6 +8,19 @@ a partir daqui
 
 ---
 
+## [1.3.0] - 2026-06-17
+
+### Added
+
+- New `/matchesFinalized` page to display the results of finished matches, grouped by stage.
+- `FinalizedCard` component with glassmorphism design to display match results and dynamic scores.
+- Premium interactive button in the `/matches` page to seamlessly navigate to the finalized matches page.
+
+### Changed
+
+- Filtered out `FINISHED` matches from the main schedule (`/matches`), naturally leaving only `UPCOMING` and `LIVE` matches visible.
+- Refactored `FinalizedCard` to accept grouped matches (`Match[]`) instead of a flattened prop structure.
+
 ## [1.2.3] - 2026-06-12
 
 ### Added

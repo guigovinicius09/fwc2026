@@ -58,7 +58,7 @@ function formatMatchTime(matchDate: string): string {
 // }
 
 export default function MatchCard({
-  matchNumber,
+  // matchNumber,
   stage,
   matchDate,
   stadium,
@@ -72,12 +72,14 @@ export default function MatchCard({
   const isFinished = result?.status === "FINISHED";
   const showScore = isLive || isFinished;
 
+  if (isFinished) return null;
+
   return (
     <div className="relative w-full bg-[#0a0f1a] border border-white/10 overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-lg">
       {/* Header */}
       <div className="flex justify-between items-center px-4 py-2 bg-white/5 border-b border-white/10 text-xs text-gray-400 font-noto uppercase tracking-wider">
         <span>
-          Jogo {matchNumber} • {stage}
+          {/* Jogo {matchNumber} •*/} {stage}
         </span>
         {isLive && (
           <span className="text-red-500 font-bold flex items-center gap-1 animate-pulse">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Match } from "@/lib/types";
 
 import MatchCard from "@/components/MatchCard";
@@ -22,10 +23,31 @@ export default function Matches() {
           <MatchCard key={match.matchNumber} {...match} />
         ))}
 
-        {/* Placeholder for remaining matches */}
-        <div className="p-8 border border-dashed border-white/20 rounded-xl text-center text-white font-noto">
-          Mais partidas serão adicionadas nos próximos dias.
-        </div>
+        {/* Link for finalized matches */}
+        <Link
+          href="/matchesFinalized"
+          className="group relative flex items-center justify-center p-6 sm:p-8 bg-white/5 hover:bg-white/10 border border-dashed border-white/20 hover:border-solid hover:border-blue-500/50 rounded-xl text-center text-white font-fwc2026 text-xl tracking-wide transition-all duration-300 backdrop-blur-sm overflow-hidden mt-4"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+          <span className="relative flex items-center gap-3 drop-shadow-md">
+            <span className="font-noto font-semibold uppercase text-lg">Confira aqui os jogos encerrados!</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="group-hover:translate-x-2 transition-transform text-blue-400"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </Link>
       </div>
     </div>
   );
