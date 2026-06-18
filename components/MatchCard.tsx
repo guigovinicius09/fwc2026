@@ -2,26 +2,12 @@
 
 import Image from "next/image";
 import { Calendar, MapPin } from "lucide-react";
-import { useMatchResult } from "@/hooks/useMatchResult";
 import type { Match } from "@/lib/types";
+import type { MatchResult } from "@/hooks/useMatchesResults";
 
-interface MatchCardProps extends Match {}
-
-// interface MatchTeam {
-//   name: string;
-//   flagUrl: string;
-// }
-
-// interface MatchCardProps {
-//   matchNumber: number;
-//   stage: string;
-//   matchDate: string;
-//   stadium: string;
-//   city: string;
-//   teamA: MatchTeam;
-//   teamB: MatchTeam;
-//   footballDataId?: number;
-// }
+interface MatchCardProps extends Match {
+  result?: MatchResult;
+}
 
 function formatMatchDate(matchDate: string): string {
   return new Date(matchDate).toLocaleDateString("pt-BR", {
@@ -33,6 +19,7 @@ function formatMatchDate(matchDate: string): string {
 
 function formatMatchTime(matchDate: string): string {
   const date = new Date(matchDate);
+
   const time = date.toLocaleTimeString("pt-BR", {
     hour: "2-digit",
     minute: "2-digit",
@@ -40,52 +27,43 @@ function formatMatchTime(matchDate: string): string {
   });
 
   const timezone =
-    new Intl.DateTimeFormat("pt-BR", { timeZoneName: "short" })
+    new Intl.DateTimeFormat("pt-BR", {
+      timeZoneName: "short",
+    })
       .formatToParts(date)
       .find((p) => p.type === "timeZoneName")?.value ?? "";
 
   return `${time} ${timezone}`;
 }
 
-// function getMatchStatus(matchDate: string): "upcoming" | "live" | "finished" {
-//   const now = new Date();
-//   const start = new Date(matchDate);
-//   const end = new Date(start.getTime() + 105 * 60 * 1000); // 90min + 15min intervalo
-
-//   if (now < start) return "upcoming";
-//   if (now >= start && now <= end) return "live";
-//   return "finished";
-// }
-
 export default function MatchCard({
-  // matchNumber,
   stage,
   matchDate,
   stadium,
   city,
   teamA,
   teamB,
-  footballDataId,
+  result,
 }: MatchCardProps) {
-  const result = useMatchResult(footballDataId, matchDate);
   const isLive = result?.status === "IN_PLAY" || result?.status === "PAUSED";
-  const isFinished = result?.status === "FINISHED";
-  const showScore = isLive || isFinished;
 
-  if (isFinished) return null;
+  const isFinished = result?.status === "FINISHED";
+
+  const showScore = isLive || isFinished;
 
   return (
     <div className="relative w-full bg-[#0a0f1a] border border-white/10 overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-lg">
       {/* Header */}
       <div className="flex justify-between items-center px-4 py-2 bg-white/5 border-b border-white/10 text-xs text-gray-400 font-noto uppercase tracking-wider">
-        <span>
-          {/* Jogo {matchNumber} •*/} {stage}
-        </span>
+        <span>{stage}</span>
+
         {isLive && (
           <span className="text-red-500 font-bold flex items-center gap-1 animate-pulse">
-            <span className="w-2 h-2 bg-red-500 rounded-full"></span> AO VIVO
+            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+            AO VIVO
           </span>
         )}
+
         {isFinished && <span>ENCERRADO</span>}
       </div>
 
@@ -102,6 +80,7 @@ export default function MatchCard({
                 className="object-cover"
               />
             </div>
+
             <span className="text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026">
               {teamA.name}
             </span>
@@ -118,6 +97,7 @@ export default function MatchCard({
             ) : (
               <span className="text-gray-500 font-fwc2026 text-xl">VS</span>
             )}
+
             <span className="text-blue-400 text-xs font-bold mt-1">
               {formatMatchTime(matchDate)}
             </span>
@@ -133,6 +113,7 @@ export default function MatchCard({
                 className="object-cover"
               />
             </div>
+
             <span className="text-white text-sm sm:text-lg tracking-wide max-w-[110px] min-h-[40px] text-center leading-tight break-words flex items-center justify-center md:font-fwc2026">
               {teamB.name}
             </span>
@@ -148,10 +129,12 @@ export default function MatchCard({
             <Calendar size={16} className="text-blue-500" />
             <span>{formatMatchDate(matchDate)}</span>
           </div>
+
           <div className="flex items-center gap-2">
             <MapPin size={16} className="text-blue-500" />
             <span>{stadium}</span>
           </div>
+
           <div className="flex items-center gap-2">
             <span className="w-4"></span>
             <span className="text-xs text-gray-500">{city}</span>

@@ -1,33 +1,30 @@
 "use client";
 
 import { Match } from "@/lib/types";
-import { useMatchResult } from "@/hooks/useMatchResult";
+import type { MatchResult } from "@/hooks/useMatchesResults";
+
+interface FinalizedMatch extends Match {
+  result?: MatchResult;
+}
 
 interface FinalizedCardProps {
   groupName: string;
-  matches: Match[];
+  matches: FinalizedMatch[];
 }
 
 export default function FinalizedCard({
   groupName,
   matches,
 }: FinalizedCardProps) {
-  // Assuming max 2 matches per card for the round
   const match0 = matches[0];
   const match1 = matches[1];
 
-  const result0 = useMatchResult(match0?.footballDataId, match0?.matchDate);
-  const result1 = useMatchResult(match1?.footballDataId, match1?.matchDate);
-
-  const is0Finished = result0?.status === "FINISHED";
-  const is1Finished = result1?.status === "FINISHED";
-
-  // Hide the entire card if no match is finished
-  if (!is0Finished && !is1Finished) return null;
+  const result0 = match0?.result;
+  const result1 = match1?.result;
 
   return (
     <div className="bg-white/5 border border-white/10 rounded-tl-4xl rounded-br-4xl p-6 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 shadow-xl w-full">
-      {/* Card Header: Displays the group name and round information */}
+      {/* Card Header */}
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl md:text-2xl font-noto text-white tracking-wide uppercase">
           {groupName}
@@ -37,13 +34,11 @@ export default function FinalizedCard({
         </span>
       </div>
 
-      {/* Matches Container: Holds all the match blocks for this group */}
       <div className="space-y-4">
-        {/* Match 1 Block */}
-        {is0Finished && match0 && (
+        {/* Match 1 */}
+        {match0 && (
           <div className="bg-black/20 rounded-xl p-3 sm:p-4 border border-white/5 hover:bg-black/30 transition-colors">
             <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4">
-              {/* Time A */}
               <div className="flex items-center justify-end gap-2 min-w-0">
                 <span className="font-noto text-gray-300 font-medium text-xs sm:text-sm truncate text-right md:text-xl">
                   {match0.teamA.name}
@@ -57,7 +52,6 @@ export default function FinalizedCard({
                 </div>
               </div>
 
-              {/* Placar */}
               <div className="flex items-center gap-2 px-1 sm:px-2 flex-shrink-0">
                 <span className="text-lg sm:text-2xl font-fwc2026 text-white">
                   {result0?.score.home}
@@ -68,7 +62,6 @@ export default function FinalizedCard({
                 </span>
               </div>
 
-              {/* Time B */}
               <div className="flex items-center gap-2 min-w-0">
                 <div className="relative w-7 h-5 sm:w-8 sm:h-6 bg-white/10 rounded overflow-hidden flex-shrink-0">
                   <img
@@ -85,11 +78,10 @@ export default function FinalizedCard({
           </div>
         )}
 
-        {/* Match 2 Block */}
-        {is1Finished && match1 && (
+        {/* Match 2 */}
+        {match1 && (
           <div className="bg-black/20 rounded-xl p-3 sm:p-4 border border-white/5 hover:bg-black/30 transition-colors">
             <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4">
-              {/* Time A */}
               <div className="flex items-center justify-end gap-2 min-w-0">
                 <span className="font-noto text-gray-300 font-medium text-xs sm:text-sm truncate text-right md:text-xl">
                   {match1.teamA.name}
@@ -103,7 +95,6 @@ export default function FinalizedCard({
                 </div>
               </div>
 
-              {/* Placar */}
               <div className="flex items-center gap-2 px-1 sm:px-2 flex-shrink-0">
                 <span className="text-lg sm:text-2xl font-fwc2026 text-white">
                   {result1?.score.home}
@@ -114,7 +105,6 @@ export default function FinalizedCard({
                 </span>
               </div>
 
-              {/* Time B */}
               <div className="flex items-center gap-2 min-w-0">
                 <div className="relative w-7 h-5 sm:w-8 sm:h-6 bg-white/10 rounded overflow-hidden flex-shrink-0">
                   <img

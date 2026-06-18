@@ -8,6 +8,16 @@ a partir daqui
 
 ---
 
+## [1.4.0] - 2026-06-17
+
+### Fixed
+
+- Fixed match segregation between active and finalized matches pages
+- Centralized match status and score retrieval through `/api/matches`
+- Added `useMatchesResults` hook for shared match state management
+- Moved business logic filtering from UI components to page-level rendering
+- Reduced API requests by replacing per-match lookups with a single competition-wide query
+
 ## [1.3.1] 2026-06-17
 
 ### Changed

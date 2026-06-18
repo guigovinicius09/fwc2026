@@ -1,11 +1,30 @@
+"use client";
+
 import Link from "next/link";
 import { Match } from "@/lib/types";
 
 import MatchCard from "@/components/MatchCard";
 import matchesData from "@/lib/data/matches.json";
+import { useMatchesResults } from "@/hooks/useMatchesResults";
 
 export default function Matches() {
   const matches = matchesData as Match[];
+  const results = useMatchesResults();
+
+  const visibleMatches = matches.filter((match) => {
+    const result = results[match.footballDataId];
+
+    // Enquanto não carregou os dados da API,
+    // mantém a partida visível.
+    if (!result) return true;
+
+    return (
+      result.status === "TIMED" ||
+      result.status === "IN_PLAY" ||
+      result.status === "PAUSED"
+    );
+  });
+
   return (
     <div className="w-full flex-1 py-16 px-6 lg:px-12">
       <div className="max-w-5xl mx-auto mb-16 text-center md:text-left">
@@ -19,7 +38,6 @@ export default function Matches() {
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col gap-6">
-        {/* Link for finalized matches */}
         <Link
           href="/matchesFinalized"
           className="group relative flex items-center justify-center p-6 sm:p-8 bg-white/5 hover:bg-white/10 border border-dashed border-white/20 hover:border-solid hover:border-blue-500/50 rounded-xl text-center text-white font-fwc2026 text-xl tracking-wide transition-all duration-300 backdrop-blur-sm overflow-hidden mt-4">
@@ -28,78 +46,17 @@ export default function Matches() {
             <span className="font-noto font-semibold uppercase text-lg">
               Confira aqui os jogos encerrados!
             </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="group-hover:translate-x-2 transition-transform text-blue-400">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
           </span>
         </Link>
 
-        {matches.map((match) => (
-          <MatchCard key={match.matchNumber} {...match} />
+        {visibleMatches.map((match) => (
+          <MatchCard
+            key={match.matchNumber}
+            {...match}
+            result={results[match.footballDataId]}
+          />
         ))}
       </div>
     </div>
   );
 }
-
-{
-  /*Old code os matches array*/
-}
-// const matches = [
-//   {
-//     matchNumber: 1,
-//     stage: "Fase de Grupos - Grupo A",
-//     date: "11 de Junho, 2026",
-//     time: "15:00 AMT",
-//     stadium: "Estadio Azteca",
-//     city: "Cidade do México, MEX",
-//     teamA: { name: "MÉXICO", flagUrl: "/images/flags/mexico.svg" },
-//     teamB: {
-//       name: "ÁFRICA DO SUL",
-//       flagUrl: "/images/flags/south_africa.svg",
-//     },
-//     status: "upcoming" as const,
-//   },
-//   {
-//     matchNumber: 2,
-//     stage: "Fase de Grupos - Grupo A",
-//     date: "11 de Junho, 2026",
-//     time: "22:00 AMT",
-//     stadium: "Estadio Akron",
-//     city: "Zapopan, MEX",
-//     teamA: {
-//       name: "COREIA DO SUL",
-//       flagUrl: "/images/flags/south_korea.svg",
-//     },
-//     teamB: { name: "TCHÉQUIA", flagUrl: "/images/flags/czechia.svg" },
-//     status: "upcoming" as const,
-//   },
-//   {
-//     matchNumber: 3,
-//     stage: "Fase de Grupos - Grupo B",
-//     date: "12 de Junho, 2026",
-//     time: "15:00 AMT",
-//     stadium: "BMO Field",
-//     city: "Toronto, CAN",
-//     teamA: {
-//       name: "CANADÁ",
-//       flagUrl: "/images/flags/canada.svg",
-//     },
-//     teamB: {
-//       name: "BÓSNIA E HERZEGOVINA",
-//       flagUrl: "/images/flags/bosnia_and_herzegovina.svg",
-//     },
-//     status: "upcoming" as const,
-//   },
-// ];
